@@ -1,0 +1,136 @@
+/*------------------------------------*\
+    RESET
+\*------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0b1 | 201101 
+    NOTE:WORK IN PROGRESS
+    USE WITH CAUTION AND TEST WITH ABANDON */
+
+    html,body,div,span,applet,object,iframe,
+    h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+    a,abbr,acronym,address,big,cite,code,
+    del,dfn,em,img,ins,kbd,q,s,samp,
+    small,strike,strong,sub,sup,tt,var,
+    b,u,i,center,
+    dl,dt,dd,ol,ul,li,
+    fieldset,form,label,legend,
+    table,caption,tbody,tfoot,thead,tr,th,td,
+    article,aside,canvas,details,figcaption,figure,
+    footer,header,hgroup,menu,nav,section,summary,
+    time,mark,audio,video{
+        margin:0;
+        padding:0;
+        border:0;
+        outline:0;
+        font-size:100%;
+        font:inherit;
+        vertical-align:baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article,aside,details,figcaption,figure,
+    footer,header,hgroup,menu,nav,section{
+        display:block;
+    }
+    body{
+        line-height:1;
+    }
+    ol,ul{
+        list-style:none;
+    }
+    blockquote,q{
+        quotes:none;
+    }
+    blockquote:before,blockquote:after,
+    q:before,q:after{
+        content:’’;
+        content:none;
+    }
+    /* remember to define visible focus styles! 
+    :focus{
+        outline:?????;
+    } */
+    
+    /* remember to highlight inserts somehow! */
+    ins{
+        text-decoration:none;
+    }
+    del{
+        text-decoration:line-through;
+    }
+    
+    table{
+        border-collapse:collapse;
+        border-spacing:0;
+    }
+    
+    
+    
+    
+    
+    /*------------------------------------*\
+        $MAIN
+    \*------------------------------------*/
+    /* GO! */
+    
+    @import url('https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap');
+    
+    #home {
+      background-color: #F5D3C8;
+      font-family: 'Teko', sans-serif;
+      
+    }
+    
+    #pomoblock {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    
+    #pomobutton {
+      border: solid;
+      margin: 0px;
+      border-color: #DDD;
+      border-width: 3px;
+      border-radius: 4px;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 32px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+    
+    #pomobutton.transition-timer {
+      border-color: #00000000;
+      padding: 20px;
+      margin: 2px;
+      background-color: #33333311;
+    }
+    
+    .inactive-timer {
+      background-color: #7F9183;
+    }
+    
+    .active-timer {
+      background-color: #734B5E;
+    }
+    
+    .break-timer {
+      background-color: #7796CB;
+    }
+    
+    .inactive-timer:hover {
+      background-color: #566559;
+    }
+    
+    .active-timer:hover {
+      background-color: #4F3340;
+    }
+    
+    .paused {
+      opacity: 50%;
+    }
