@@ -1,5 +1,5 @@
-const BREAK_TIME = 15; // break time in seconds
-const WORK_TIME = 12; // work time in seconds'
+var BREAK_TIME = 15; // break time in seconds
+var WORK_TIME = 12; // work time in seconds'
 const TRANSITION_TIME = 10; // how long to be in transition state for
 
 var muted = true;  // this gets flipped when the script is called, so default is unmuted actually
@@ -25,7 +25,7 @@ const getTimeLeft = (endTime) => {
 const CURR_TIME = Date.now();
 
 const transitionButton = () => {
-  finishSound.play();
+  if (!muted) finishSound.play();
   button = document.getElementById("pomobutton");
   button.className = "transition-timer";
   button.innerHTML = "";
@@ -78,7 +78,12 @@ const countdown = (button, endTime) => { // only called when active
 
 const activate = () => { // only called when inactive
   var btn = document.getElementById("pomobutton");
-  startSound.play();
+
+  // parse the two fields and update the time BEFORE we continue
+  BREAK_TIME = document.getElementById("breakTime").value * 60;
+  WORK_TIME = document.getElementById("workTime").value * 60;
+  
+  if (!muted) startSound.play();
   btn.className = "active-timer"
   btn.removeEventListener("click", activate);
   countdown(btn, Date.now() + WORK_TIME * 1000);
