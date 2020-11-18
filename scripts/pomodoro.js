@@ -2,7 +2,7 @@ const BREAK_TIME = 15; // break time in seconds
 const WORK_TIME = 12; // work time in seconds'
 const TRANSITION_TIME = 10; // how long to be in transition state for
 
-var muted = false;
+var muted = true;  // this gets flipped when the script is called, so default is unmuted actually
 var muteButtonImage = document.createElement("img");
 var unmuteButtonImage = document.createElement("img");
 muteButtonImage.src = "../img/mute.png";
@@ -113,3 +113,6 @@ const flipMute = () => {
 }
 
 deactivateButton();
+muteButtonImage.addEventListener("click", flipMute, false);
+unmuteButtonImage.addEventListener("click", flipMute, false);
+flipMute();
