@@ -5,8 +5,8 @@ const TRANSITION_TIME = 10; // how long to be in transition state for
 var muted = true;  // this gets flipped when the script is called, so default is unmuted actually
 var muteButtonImage = document.createElement("img");
 var unmuteButtonImage = document.createElement("img");
-muteButtonImage.src = "/img/mute.png";
-unmuteButtonImage.src = "/img/unmute.png";
+muteButtonImage.src = "/babs-pomodoro/img/mute.png";
+unmuteButtonImage.src = "/babs-pomodoro/img/unmute.png";
 
 var transitionImage = document.createElement("img");
 transitionImage.src = "https://media1.tenor.com/images/85adf3feacb86830d003b8767efcb8de/tenor.gif?itemid=16065857";
