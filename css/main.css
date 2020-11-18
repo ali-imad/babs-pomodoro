@@ -77,19 +77,20 @@
     #home {
       background-color: #F5D3C8;
       font-family: 'Teko', sans-serif;
-      
+      background-image: url("../img/bunnee.jpg");
     }
     
     #pomoblock {
       margin: 0;
       position: absolute;
-      background-color: #FFFFFF33;
+      background-color: #d49cd6d5;
       top: 50%;
       left: 50%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
       display: flex;
       flex-flow: column wrap;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     }
     
     #pomobutton {
@@ -104,16 +105,20 @@
       text-decoration: none;
       display: inline-block;
       font-size: 32px;
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     }
     
     #pomobutton.transition-timer {
       border-color: #00000000;
       padding: 20px;
       margin: 2px;
-      background-color: #33333311;
+      background-color: #00000000;
     }
     
+    #pomo-info {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
     .inactive-timer {
       background-color: #7F9183;
     }
@@ -140,4 +145,23 @@
 
     .option-area {
       padding: 0.2em 1em;
+    }
+
+    .option-area>h3 {
+      color: #FFFFFFFF;
+      
+    }
+
+    #mute-button {
+      flex-basis: 40%;
+    }
+
+    #mute-button>img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    #pomo-vars {
+      display: flex;
+      flex-flow: column wrap;
     }
