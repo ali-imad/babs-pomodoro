@@ -1,167 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Pangolin&display=swap');
+
 /*------------------------------------*\
-    RESET
+  RESET
 \*------------------------------------*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
-    v2.0b1 | 201101 
-    NOTE:WORK IN PROGRESS
-    USE WITH CAUTION AND TEST WITH ABANDON */
+  v2.0b1 | 201101 
+  NOTE:WORK IN PROGRESS
+  USE WITH CAUTION AND TEST WITH ABANDON */
 
-    html,body,div,span,applet,object,iframe,
-    h1,h2,h3,h4,h5,h6,p,blockquote,pre,
-    a,abbr,acronym,address,big,cite,code,
-    del,dfn,em,img,ins,kbd,q,s,samp,
-    small,strike,strong,sub,sup,tt,var,
-    b,u,i,center,
-    dl,dt,dd,ol,ul,li,
-    fieldset,form,label,legend,
-    table,caption,tbody,tfoot,thead,tr,th,td,
-    article,aside,canvas,details,figcaption,figure,
-    footer,header,hgroup,menu,nav,section,summary,
-    time,mark,audio,video{
-        margin:0;
-        padding:0;
-        border:0;
-        outline:0;
-        font-size:100%;
-        font:inherit;
-        vertical-align:baseline;
-    }
-    /* HTML5 display-role reset for older browsers */
-    article,aside,details,figcaption,figure,
-    footer,header,hgroup,menu,nav,section{
-        display:block;
-    }
-    body{
-        line-height:1;
-    }
-    ol,ul{
-        list-style:none;
-    }
-    blockquote,q{
-        quotes:none;
-    }
-    blockquote:before,blockquote:after,
-    q:before,q:after{
-        content:’’;
-        content:none;
-    }
-    /* remember to define visible focus styles! 
-    :focus{
-        outline:?????;
-    } */
-    
-    /* remember to highlight inserts somehow! */
-    ins{
-        text-decoration:none;
-    }
-    del{
-        text-decoration:line-through;
-    }
-    
-    table{
-        border-collapse:collapse;
-        border-spacing:0;
-    }
-    
-    
-    
-    
-    
-    /*------------------------------------*\
-        $MAIN
-    \*------------------------------------*/
-    /* GO! */
-    
-    @import url('https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap');
-    
-    #home {
-      background-color: #F5D3C8;
-      font-family: 'Teko', sans-serif;
-      background-image: url("../img/bunnee.jpg");
-    }
-    
-    #pomoblock {
-      margin: 0;
-      position: absolute;
-      background-color: #d49cd6d5;
-      top: 50%;
-      left: 50%;
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      display: flex;
-      flex-flow: column wrap;
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    }
-    
-    #pomobutton {
-      border: solid;
-      border-color: #DDD;
-      margin: 2vh 1vw;
-      border-width: 3px;
-      border-radius: 4px;
-      color: white;
-      padding: 10vh 10vw;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 32px;
-    }
-    
-    #pomobutton.transition-timer {
-      border-color: #00000000;
-      padding: 20px;
-      margin: 2px;
-      background-color: #00000000;
-    }
-    
-    #pomo-info {
-      display: flex;
-      justify-content: space-evenly;
-    }
+  html,body,div,span,applet,object,iframe,
+  h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+  a,abbr,acronym,address,big,cite,code,
+  del,dfn,em,img,ins,kbd,q,s,samp,
+  small,strike,strong,sub,sup,tt,var,
+  b,u,i,center,
+  dl,dt,dd,ol,ul,li,
+  fieldset,form,label,legend,
+  table,caption,tbody,tfoot,thead,tr,th,td,
+  article,aside,canvas,details,figcaption,figure,
+  footer,header,hgroup,menu,nav,section,summary,
+  time,mark,audio,video{
+      margin:0;
+      padding:0;
+      border:0;
+      outline:0;
+      font-size:100%;
+      font:inherit;
+      vertical-align:baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article,aside,details,figcaption,figure,
+  footer,header,hgroup,menu,nav,section{
+      display:block;
+  }
+  body{
+      line-height:1;
+  }
+  ol,ul{
+      list-style:none;
+  }
+  blockquote,q{
+      quotes:none;
+  }
+  blockquote:before,blockquote:after,
+  q:before,q:after{
+      content:’’;
+      content:none;
+  }
+  /* remember to define visible focus styles! 
+  :focus{
+      outline:?????;
+  } */
+  
+  /* remember to highlight inserts somehow! */
+  ins{
+      text-decoration:none;
+  }
+  del{
+      text-decoration:line-through;
+  }
+  
+  table{
+      border-collapse:collapse;
+      border-spacing:0;
+  }
+  
+  
+  
+  
+  
+  /*------------------------------------*\
+      $MAIN
+  \*------------------------------------*/
+  /* GO! */
 
-    .inactive-timer {
-      background-color: #7F9183;
-    }
-    
-    .active-timer {
-      background-color: #734B5E;
-    }
-    
-    .break-timer {
-      background-color: #7796CB;
-    }
-    
-    .inactive-timer:hover {
-      background-color: #566559;
-    }
-    
-    .active-timer:hover {
-      background-color: #4F3340;
-    }
-    
-    .paused {
-      opacity: 50%;
-    }
+  #home {
+    background-color: #f5d3c8;
+    font-family: 'Pangolin', sans-serif;
+    background-image: url("../img/bunnee.jpg");
+  }
+  
+  #pomoblock {
+    margin: 0;
+    position: absolute;
+    background-color: #9d7c9ed5;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-flow: column wrap;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  
+  #pomobutton {
+    border: solid;
+    border-color: #DDD;
+    margin: 2vh 1vw;
+    border-width: 3px;
+    border-radius: 4px;
+    color: white;
+    padding: 10vh 10vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 50px;
+  }
 
-    .option-area {
-      padding: 0.2em 1em;
-    }
+  
+  #pomobutton.transition-timer {
+    border-color: #00000000;
+    padding: 20px;
+    margin: 2px;
+    background-color: #00000000;
+  }
+  
+  #pomo-info {
+    display: flex;
+    justify-content: space-evenly;
+  }
 
-    .option-area>h3 {
-      color: #FFFFFFFF;
-      
-    }
+  .inactive-timer {
+    background-color: #f4cdd2;
+  }
+  
+  .active-timer {
+    background-color: #734B5E;
+  }
+  
+  .break-timer {
+    background-color: #f5cfb8;
+  }
+  
+  .inactive-timer:hover {
+    background-color: #bea2a6;
+  }
+  
+  .active-timer:hover {
+    background-color: #4F3340;
+  }
+  
+  .paused {
+    opacity: 50%;
+  }
 
-    #mute-button {
-      flex-basis: 40%;
-    }
+  .option-area {
+    padding: 0.2em 1em;
+    margin-bottom: 1em;
+    text-align: center;
+  }
 
-    #mute-button>img {
-      max-width: 100%;
-      max-height: 100%;
-    }
+  .option-area>h3 {
+    color: #FFFFFFFF;
+    font-family: 'Pangolin', sans-serif;
+    font-weight: 700;
+  }
 
-    #pomo-vars {
-      display: flex;
-      flex-flow: column wrap;
-    }
+  #mute-button {
+    flex-basis: 40%;
+  }
+
+  #mute-button>img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  #pomo-vars {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  
+  .inc-field {
+    font-size: xx-large;
+    font-family: 'Nunito Sans', sans-serif;
+    max-width: 2.5em;
+  }
