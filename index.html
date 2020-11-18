@@ -1,22 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>babs pomodoro</title>
-    <link rel="stylesheet" href="css/main.css">
-    
+  <meta charset="utf-8">
+  <title>babs pomodoro</title>
+  <link rel="stylesheet" href="css/main.css">
+  
 </head>
 
 <body id="home">
-    <audio id="startSound" src="https://oldschool.runescape.wiki/images/4/45/189.ogg?c58c1" preload="auto"  ></audio>
-    <audio id="finishSound" src="https://oldschool.runescape.wiki/images/2/2e/Farming_level_up_%28with_unlocks%29.ogg?2dfd1" preload="auto"  ></audio>
+  <audio id="startSound" src="https://oldschool.runescape.wiki/images/4/45/189.ogg?c58c1" preload="auto"  ></audio>
+  <audio id="finishSound" src="https://oldschool.runescape.wiki/images/2/2e/Farming_level_up_%28with_unlocks%29.ogg?2dfd1" preload="auto"  ></audio>
 
-    <div id="pomoblock">
-        <div id="pomobutton" class="active-timer">
-        </div>
+  <div id="pomoblock">
+
+    <div id="pomobutton" class="active-timer">
     </div>
 
-    <script src='scripts/pomodoro.js'></script>
+    <div id="pomo-info">
+
+      <div id="pomo-vars">
+        <div class="option-area">
+          <h3>worktime (minutes)</h3>
+          <input type="number" id="workTime" class="inc-field" name="workTime" step="0.5" min="0.5" value="20">
+        </div>
+        <div class="option-area">
+          <h3>breaktime (minutes)</h3>
+          <input type="number" id="breakTime" class="inc-field" name="breakTime" step="0.5" min="0.5" value="10">
+        </div>
+      </div>  <!-- time changing. should be hidden/unchangeable when pomobutton is active -->
+
+      <div id="pomo-info">
+        <div id="mute-button">
+        </div>
+      </div>  <!-- mute button, incrementer? -->
+    </div>
+  </div>
+
+  <script src='scripts/pomodoro.js'></script>
 
 </body>
 </html>

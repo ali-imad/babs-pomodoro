@@ -1,6 +1,12 @@
-const BREAK_TIME = 600; // break time in seconds
-const WORK_TIME = 1200; // work time in seconds'
+var BREAK_TIME = 15; // break time in seconds
+var WORK_TIME = 12; // work time in seconds'
 const TRANSITION_TIME = 10; // how long to be in transition state for
+
+var muted = true;  // this gets flipped when the script is called, so default is unmuted actually
+var muteButtonImage = document.createElement("img");
+var unmuteButtonImage = document.createElement("img");
+muteButtonImage.src = "../img/mute.png";
+unmuteButtonImage.src = "../img/unmute.png";
 
 var transitionImage = document.createElement("img");
 transitionImage.src = "https://media1.tenor.com/images/85adf3feacb86830d003b8767efcb8de/tenor.gif?itemid=16065857";
@@ -19,7 +25,7 @@ const getTimeLeft = (endTime) => {
 const CURR_TIME = Date.now();
 
 const transitionButton = () => {
-  finishSound.play();
+  if (!muted) finishSound.play();
   button = document.getElementById("pomobutton");
   button.className = "transition-timer";
   button.innerHTML = "";
@@ -72,7 +78,12 @@ const countdown = (button, endTime) => { // only called when active
 
 const activate = () => { // only called when inactive
   var btn = document.getElementById("pomobutton");
-  startSound.play();
+
+  // parse the two fields and update the time BEFORE we continue
+  BREAK_TIME = document.getElementById("breakTime").value * 60;
+  WORK_TIME = document.getElementById("workTime").value * 60;
+  
+  if (!muted) startSound.play();
   btn.className = "active-timer"
   btn.removeEventListener("click", activate);
   countdown(btn, Date.now() + WORK_TIME * 1000);
@@ -93,5 +104,20 @@ const breakTime = () => {
   var rest = setTimeout(deactivateButton, (BREAK_TIME + 0.25) * 1000);
 };
 
+const flipMute = () => {
+  var muteArea = document.getElementById("mute-button");
+  if (muted) {
+    muted = false;
+    muteArea.innerHTML = "";
+    muteArea.appendChild(muteButtonImage);
+  } else {
+    muted = true;
+    muteArea.innerHTML = "";
+    muteArea.appendChild(unmuteButtonImage);
+  }
+}
+
 deactivateButton();
- 
+muteButtonImage.addEventListener("click", flipMute, false);
+unmuteButtonImage.addEventListener("click", flipMute, false);
+flipMute();
