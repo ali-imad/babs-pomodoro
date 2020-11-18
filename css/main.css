@@ -83,20 +83,23 @@
     #pomoblock {
       margin: 0;
       position: absolute;
+      background-color: #FFFFFF33;
       top: 50%;
       left: 50%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
+      display: flex;
+      flex-flow: column wrap;
     }
     
     #pomobutton {
       border: solid;
-      margin: 0px;
       border-color: #DDD;
+      margin: 2vh 1vw;
       border-width: 3px;
       border-radius: 4px;
       color: white;
-      padding: 15px 32px;
+      padding: 10vh 10vw;
       text-align: center;
       text-decoration: none;
       display: inline-block;
@@ -133,4 +136,8 @@
     
     .paused {
       opacity: 50%;
+    }
+
+    .option-area {
+      padding: 0.2em 1em;
     }
