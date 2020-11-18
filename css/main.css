@@ -96,7 +96,8 @@ table{
 #pomobutton {
   margin: 2vh 1vw;
   color: white;
-  padding: 10vh 10vw;
+  padding: 4vh 4vw;
+  max-width: 90%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
