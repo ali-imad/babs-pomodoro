@@ -26,6 +26,9 @@ const CURR_TIME = Date.now();
 
 const transitionButton = () => {
   if (!muted) finishSound.play();
+  // parse the break field and update the time, in case it changed since we started the timer
+  BREAK_TIME = document.getElementById("breakTime").value * 60;
+
   button = document.getElementById("pomobutton");
   button.className = "transition-timer";
   button.innerHTML = "";
